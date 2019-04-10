@@ -1,0 +1,5 @@
+.logo {
+    height: 100%;
+    grid-area: logo;
+    background-color: blue;
+}

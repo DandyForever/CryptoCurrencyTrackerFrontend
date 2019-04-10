@@ -1,0 +1,8 @@
+.header {
+    grid-area: h;
+    display: grid;
+    background-color: antiquewhite;
+
+    grid-template-areas: "logo allCrypto myCrypto logOut";
+    grid-template-columns: 25% 25% 25% 25%;
+}
