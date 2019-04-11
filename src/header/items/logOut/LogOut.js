@@ -1,10 +1,11 @@
 import React from 'react'
 import style from './LogOut.module.css'
+import {NavLink} from "react-router-dom";
 
 const LogOut = (props) => {
     return (
         <div className={style.logOut}>
-            Log out
+            <NavLink to = '/start' activeClassName={style.activeNavLink}>Log out</NavLink>
         </div>
     )
 };

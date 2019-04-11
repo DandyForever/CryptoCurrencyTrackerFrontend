@@ -1,10 +1,11 @@
 import React from 'react'
 import style from './MyCrypto.module.css'
+import {NavLink} from "react-router-dom";
 
 const MyCrypto = (props) => {
     return (
         <div className={style.myCrypto}>
-            My Crypto Currencies
+            <NavLink to = '/myCurrencies' activeClassName={style.activeNavLink} >My Crypto Currencies</NavLink>
         </div>
     )
 };
