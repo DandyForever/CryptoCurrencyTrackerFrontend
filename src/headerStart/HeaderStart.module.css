@@ -1,0 +1,11 @@
+.headerStart {
+    grid-area: h;
+    display: grid;
+    background-color: antiquewhite;
+
+    grid-template-areas: "logo signUp";
+    grid-template-columns: 75% 25%;
+
+    color: black;
+}
+

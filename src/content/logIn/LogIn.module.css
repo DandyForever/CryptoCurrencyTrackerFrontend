@@ -1,0 +1,8 @@
+.logIn {
+    grid-area: c;
+    background-color: khaki;
+
+    display: grid;
+    grid-template-areas: "about logging";
+    grid-template-columns: 60% 40%;
+}
