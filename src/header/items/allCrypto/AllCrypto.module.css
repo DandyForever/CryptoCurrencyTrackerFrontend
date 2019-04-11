@@ -1,6 +1,7 @@
 .allCrypto {
     grid-area: allCrypto;
     background-color: bisque;
+    text-align: center;
 }
 
 .allCrypto a {
