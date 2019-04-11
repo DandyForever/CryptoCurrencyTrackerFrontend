@@ -1,4 +1,13 @@
 .allCrypto {
     grid-area: allCrypto;
-    background-color: chocolate;
+    background-color: bisque;
+}
+
+.allCrypto a {
+    color: black;
+    text-decoration: none;
+}
+
+.allCrypto a.activeNavLink {
+    color: olivedrab;
 }

@@ -1,4 +1,13 @@
 .logOut {
     grid-area: logOut;
-    background-color: aquamarine;
+    background-color: aliceblue;
+}
+
+.logOut a {
+    color: black;
+    text-decoration: none;
+}
+
+.logOut a.activeNavLink {
+    color: olivedrab;
 }

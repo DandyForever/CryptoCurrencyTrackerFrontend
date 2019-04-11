@@ -5,4 +5,7 @@
 
     grid-template-areas: "logo allCrypto myCrypto logOut";
     grid-template-columns: 25% 25% 25% 25%;
+
+    color: black;
 }
+

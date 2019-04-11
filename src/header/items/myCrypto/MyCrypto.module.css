@@ -1,4 +1,14 @@
 .myCrypto {
     grid-area: myCrypto;
-    background-color: darkcyan;
+    background-color: beige;
+
+}
+
+.myCrypto a {
+    color: black;
+    text-decoration: none;
+}
+
+.myCrypto a.activeNavLink {
+    color: olive;
 }
