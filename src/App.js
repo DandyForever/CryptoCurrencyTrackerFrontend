@@ -13,14 +13,14 @@ class App extends Component {
             <BrowserRouter>
             <div className="App-layout">
                 <div>
-                    <Route path = "/logIn" component={HeaderStart}/>
+                    <Route exact path = "/" component={HeaderStart}/>
                     <Route path = "/myCurrencies" component={Header}/>
                     <Route path = "/allCurrencies" component={Header}/>
                 </div>
                 <div>
                     <Route path = "/allCurrencies" component={AllCurrencies}/>
                     <Route path = "/myCurrencies" component={MyCurrencies}/>
-                    <Route path = "/logIn" component={LogIn}/>
+                    <Route exact path = "/" component={LogIn}/>
                 </div>
             </div>
             </BrowserRouter>

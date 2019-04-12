@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 const LogOut = (props) => {
     return (
         <div className={style.logOut}>
-            <NavLink to = '/logIn' activeClassName={style.activeNavLink}>Log out</NavLink>
+            <NavLink exact to = '/' activeClassName={style.activeNavLink}>Log out</NavLink>
         </div>
     )
 };
