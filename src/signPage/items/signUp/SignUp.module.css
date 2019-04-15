@@ -1,0 +1,13 @@
+.signUp {
+    grid-area: logOut;
+    background-color: aliceblue;
+}
+
+.signUp a {
+    color: black;
+    text-decoration: none;
+}
+
+.signUp a.activeNavLink {
+    color: olivedrab;
+}
