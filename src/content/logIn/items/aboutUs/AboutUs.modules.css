@@ -1,0 +1,6 @@
+.aboutUs {
+    grid-area: about;
+
+    color: black;
+    font-size: 18px;
+}

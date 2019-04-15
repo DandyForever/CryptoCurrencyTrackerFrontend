@@ -1,14 +1,13 @@
-.allCrypto {
-    grid-area: allCrypto;
+.signUp {
+    grid-area: signUp;
     background-color: bisque;
-    text-align: center;
 }
 
-.allCrypto a {
+.signUp a {
     color: black;
     text-decoration: none;
 }
 
-.allCrypto a.activeNavLink {
+.signUp a.activeNavLink {
     color: olivedrab;
 }
