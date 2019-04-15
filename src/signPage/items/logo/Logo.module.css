@@ -1,0 +1,5 @@
+.logo {
+    height: 60px;
+    grid-area: logo;
+    background-color: floralwhite;
+}
