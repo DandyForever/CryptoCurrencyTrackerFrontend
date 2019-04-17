@@ -1,4 +1,16 @@
 .allCurrencies {
     grid-area: c;
     background-color: khaki;
+    align-content: center;
+}
+
+.currenciesTable {
+
+}
+
+td, th{
+    border: 1px solid black;
+    padding-left: 2%;
+    padding-right: 2%;
+    border: 2px solid Maroon;
 }

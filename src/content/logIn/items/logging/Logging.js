@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './Logging.module.css'
-import InputField from "../inputFeild/InputField";
+import InputField from "../inputField/InputField";
 
 const Logging = (props) => {
     return (
