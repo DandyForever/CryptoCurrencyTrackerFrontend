@@ -4,29 +4,27 @@ import style from './AllCurrencies.module.css'
 import {logger} from "redux-logger";
 
 const AllCurrencies = (props) => {
-    debugger;
-    logger(props);
-    props.fetchCurrencies();
-    debugger;
-    logger(props);
 
-    let currencies = props.currencies.map(currency => <Currency key={currency.id}
+    props.fetchCurrencies();
+
+    let currencies = props.currencies.map(currency => <Currency
+        key={currency.id}
         id={currency.id}
         name={currency.name}
         value={currency.currVal}
-        lastChange={currency.lastChange}/>);
+        lastChange={currency.lastChange}
+        saveSubscription={props.saveSubscription}/>);
 
 
-    logger(props);
     return (
         <div className={style.allCurrencies}>
             <table className={style.currenciesTable}>
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Name</th>
                         <th>Value</th>
                         <th>Last Change</th>
+                        <th>Subscription</th>
                     </tr>
                 </thead>
                 <tbody>

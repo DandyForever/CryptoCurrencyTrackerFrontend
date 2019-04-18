@@ -4,10 +4,9 @@ const FETCH_CURRENCIES = 'FETCH_CURRENCIES';
 const FETCH_CURRENCIES_PENDING = 'FETCH_CURRENCIES_PENDING';
 const FETCH_CURRENCIES_REJECTED = 'FETCH_CURRENCIES_REJECTED';
 const FETCH_CURRENCIES_FULFILLED = 'FETCH_CURRENCIES_FULFILLED';
+const SAVE_SUBSCRIPTION = 'SAVE_SUBSCRIPTION';
 
 const initialState = {
-    mustFetch: true,
-
     fetching: false,
     fetched: false,
     currencies: [],
@@ -26,9 +25,12 @@ const allCurrenciesReducer = (state = initialState, action) => {
             return {
                 ...state,
                 fetching: false,
-                fetched: true,
+                fetched: false,
                 currencies: action.payload.data
             };
+
+        case SAVE_SUBSCRIPTION:
+            return saveSubscription(state, action);
 
         default:
             return state
@@ -42,5 +44,20 @@ export const fetchCurrenciesCreator = () => {
         payload: axios.get("http://localhost:8080/crypto-tracker/currency/")
     }
 };
+
+const saveSubscription = (state, action) => {
+    axios.post("http://localhost:8080/crypto-tracker/subscriptions/create_subscription?currencyId=" + action.currencyId);
+    //alert("sosi" + action.currencyId);
+    return state;
+};
+
+
+export const saveSubscriptionCreator = (currencyId) => {
+    return {
+        type: SAVE_SUBSCRIPTION,
+        currencyId: currencyId
+    }
+};
+
 
 export default allCurrenciesReducer;

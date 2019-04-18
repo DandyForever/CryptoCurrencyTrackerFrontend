@@ -16,5 +16,3 @@ export let browserHistory = createBrowserHistory();
 
 const middleware = applyMiddleware(promise, thunk, routerMiddleware(browserHistory));
 export let store = createStore(reducers, middleware);
-
-// export let store = createStore(reducers);
