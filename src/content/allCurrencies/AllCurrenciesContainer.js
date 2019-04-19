@@ -1,4 +1,4 @@
-import {fetchCurrenciesCreator} from "../../redux/allCurrenciesReducer";
+import {fetchCurrenciesCreator, saveSubscriptionCreator} from "../../redux/allCurrenciesReducer";
 import AllCurrencies from "./AllCurrencies";
 import {connect} from "react-redux";
 
@@ -10,11 +10,15 @@ let mapStateToProps = (state) => {
 };
 
 let mapDispatchToProps = (dispatch) => {
-  return {
-      fetchCurrencies: () => {
-          dispatch(fetchCurrenciesCreator());
-      }
-  }
+    return {
+        fetchCurrencies: () => {
+            dispatch(fetchCurrenciesCreator());
+        },
+
+        saveSubscription: (currencyId) => {
+            dispatch(saveSubscriptionCreator(currencyId));
+        }
+    }
 };
 
 let AllCurrenciesContainer = connect(mapStateToProps, mapDispatchToProps)(AllCurrencies);

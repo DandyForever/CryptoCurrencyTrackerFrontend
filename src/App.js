@@ -1,9 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Header from "./header/Header";
 import MyCurrencies from "./content/myCurrencies/MyCurrencies"
 import "./App.css"
-import {BrowserRouter, Route, Router} from "react-router-dom";
-import AllCurrencies from "./content/allCurrencies/AllCurrencies";
+import {Route, Router} from "react-router-dom";
 import HeaderStart from "./headerStart/HeaderStart";
 import LogIn from "./content/logIn/LogIn";
 
@@ -20,17 +19,16 @@ const App = (props) => {
             <Router history={history}>
                 <div className="App-layout">
                     <div>
-                        <Route exact path = "/" component={HeaderStart}/>
-                        <Route path = "/myCurrencies" component={Header}/>
-                        <Route path = "/allCurrencies" component={Header}/>
-                        <Route path = "/SignUp" component={SignPage}/>
+                        <Route exact path = "/" render = {() => <HeaderStart/>}/>
+                        <Route path = "/myCurrencies" render = {() => <Header/>}/>
+                        <Route path = "/allCurrencies" render = {() => <Header/>}/>
+                        <Route path = "/SignUp" render = {() => <SignPage/>}/>
                     </div>
                     <div>
                         <Route path = "/allCurrencies" render = {() => <AllCurrenciesContainer store={props.store}/>}/>
-                        <Route path = "/myCurrencies" component={MyCurrencies}/>
-                        <Route exact path = "/" component={LogIn}/>
-                        <Route path = "/SignUp" component={SignUp}/>
-
+                        <Route path = "/myCurrencies" render = {() => <MyCurrencies/>}/>
+                        <Route exact path = "/" render = {() => <LogIn/>}/>
+                        <Route path = "/SignUp" render = {() => <SignUp/>}/>
                     </div>
                 </div>
             </Router>

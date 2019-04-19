@@ -4,7 +4,9 @@ import logo from '../../../logo.PNG'
 
 const Logo = (props) => {
     return (
-        <img className={style.logo} src={logo}/>
+        <div className={style.logoDiv}>
+            <img className={style.logo} src={logo}/>
+        </div>
     )
 };
 
