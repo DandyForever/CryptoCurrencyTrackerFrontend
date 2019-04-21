@@ -19,7 +19,7 @@ const MyCurrencies = (props) => {
         currencyDto = {subscription.currencyDto}
         userVal = {subscription.userVal}
         totalAssets = {subscription.totalAssets}
-        deleteSubscription = {subscription.deleteSubscription}
+        deleteSubscription = {props.deleteSubscription}
         />);
 
     return (
