@@ -87,7 +87,7 @@ const buildSubscriptionDto = (subscription) => {
 
 const deleteSubscription = (state, subscriptionPK) => {
       let stateCopy = {...state};
-      stateCopy.subscriptions = {...state.subscriptions};
+      stateCopy.subscriptions = [...state.subscriptions];
 
       let subscriptionToDelete = findBySubscriptionPK(stateCopy.subscriptions, subscriptionPK);
       let subscriptionToDeleteIndex = stateCopy.subscriptions.indexOf(subscriptionToDelete);
@@ -106,7 +106,9 @@ const httpDeleteSubscription = (subscriptionToDelete) =>{
 
 
 const findBySubscriptionPK = (array, subscriptionPK) => {
-  return array.filter(item => item.subscriptionPK === subscriptionPK)[0];
+    //alert(array.subscriptions);
+    //alert(subscriptionPK.userId);
+    return array.filter(item => item.subscriptionPK === subscriptionPK)[0];
 };
 
 //Action Creators
